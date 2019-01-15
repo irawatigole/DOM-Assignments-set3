@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head><title>auto</title></head>
+    <body>
+            <label for="title">Name </label>
+            <input type="text" id="name" onkeyup="filter()"name="name"/><br/>
+            <ul id="tags">
+                <li>Irawati</li>
+                <li>Priya</li> 
+                <li>Chiatra</li>
+                <li>Shravya</li>
+                <li>Kavya</li>
+            </ul>
+    </body>
+    <script>    
+    function filter(){
+    let nameHandle = document.getElementById("name");
+    let ulHandle = document.getElementById("tags");
+    let liHandle = ulHandle.getElementsByTagName("li");
+    
+    let values = nameHandle.value.toUpperCase();
+        for (let i = 0; i < liHandle.length; i++) {     
+        if (liHandle[i].innerHTML.toUpperCase().indexOf(values) > -1) {
+            liHandle[i].style.display = "";
+        } else {
+            liHandle[i].style.display = "none";
+        }
+        }
+    }
+     </script>
+</html>

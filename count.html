@@ -1,0 +1,32 @@
+<!-- Write JavaScript code to find the total number of words and characters -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>count</title>
+    </head>
+    <body>
+            <div id="app"> 
+                    <textarea id="area"> </textarea>
+                    <p>You have written <b ><span id="w">0</span> words</b> and <b><span id="c">0</span> characters</b></p>
+            </div>
+    </body>
+    <script>
+        // var paragraphs = document.getElementsByTagName("p");
+        let textHandle = document.getElementById('area');
+        let wordHandle = document.getElementById('w');
+        let characterHandle = document.getElementById('c');
+        
+        textHandle.addEventListener('input', function(){
+             
+             var text = textHandle.value.split(' ').length;
+             wordHandle.innerText = text
+
+            var text1 = textHandle.value.length;
+             characterHandle.innerText = text1;
+        
+            }, false);
+
+      
+    </script>
+</html>
